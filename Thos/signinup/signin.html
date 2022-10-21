@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="./header_footer.css" />
+  </head>
+  <body>
+    <div class="header" id="header-part">
+      <div class="left" id="left-part">
+        <ion-icon
+          name="menu-outline"
+          class="toggleMenu span1"
+          onclick="toggleMenu()"
+          id="menu-icon"
+        ></ion-icon>
+        <span
+          class="material-icons-outlined span2"
+          onclick="closeToggleMenu()"
+          id="close-icon"
+        >
+          close
+        </span>
+        <a href="../home/Thos_home.html"><b class="title-font">Thos</b></a>
+      </div>
+      <div class="right" id="right-part">
+        <div class="toggle-menu">
+          <a href="../blog/blog.html">Blog</a>
+          <a href="../shop/shop.html">Shop</a>
+          <a href="../signinup/signup.html">Sign up</a>
+          <a href="../signinup/signin.html" class="active">Log in</a>
+        </div>
+        <div class="shopping-bag">
+          <ion-icon class="icon-cart" name="bag-outline"></ion-icon>
+          <a href="../shopingbag/shopingbag.html"
+            >Shopping bag (<span class="item-number">0</span>)</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button>Login</button>
+          <p class="message">
+            Not registered? <a href="./signup.html">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <h4>Subscribe to our newsletter</h4>
+      <form id="form-tag">
+        <label id="email-label">Email address*</label>
+        <input type="email" placeholder="Your email address" id="email-input" />
+      </form>
+      <button id="subscribe-btn" onclick="checkEmail()">Subscribe</button>
+      <div class="social-media">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/home" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://www.pinterest.com/" target="_blank"
+          ><i class="fa-brands fa-pinterest-p"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

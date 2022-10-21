@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.not-active {
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+.app {
+  width: 100%;
+  /* height: 200vh; */
+}
+.app .page {
+  width: 100%;
+  /* height: 200vh; */
+}
+.app .page .header-background {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 98px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+}
+.app .page .header-background.active {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+
+.app .page .block-header {
+  z-index: 10;
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 36px 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #232323;
+}
+.toggleMenu {
+  display: none;
+}
+.closeBtn {
+  display: none;
+}
+.app .page .block-header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .page .block-header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.app .page .block-header .list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.app .page .block-header ul li {
+  margin-right: 36px;
+  list-style: none;
+}
+.app .page .block-header .cart a {
+  position: relative;
+  top: -8px;
+}
+.app .page .block-header .cart .icon-cart {
+  font-size: 30px;
+}
+.app .page .block-header .not-active.active {
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid black;
+}
+.app .page .block-header .not-active:hover {
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid black;
+}
+.app .page .banner {
+  background: #fff;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10vh;
+}
+.app .page .banner p {
+  font-size: 64px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+.app .page .shopingcart {
+  padding: 16px;
+  width: 100%;
+}
+.app .page .shopingcart h1 {
+  font-family: "Libre Baskerville", serif;
+}
+.app .page .shopingcart .cart-header {
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app .page .shopingcart .cart-header:hover {
+  font-weight: 500;
+}
+.app .page .shopingcart .cart-background {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.app .page .shopingcart .cart-background .detail-cart {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32% 68%;
+  width: 100%;
+  max-width: 1240px;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .page-title {
+  line-height: 40px;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .page-title a {
+  text-decoration: none;
+  color: #757575;
+  font-weight: 200;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .info {
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .info.close {
+  visibility: hidden;
+  opacity: 0;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .name {
+  display: flex;
+  justify-content: space-between;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .name
+  ion-icon {
+  font-size: 25px;
+  color: #757575;
+  cursor: pointer;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .name
+  ion-icon:hover {
+  color: #1a7ac4;
+}
+
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .name
+  a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 300;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .price {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .price
+  .qty {
+  cursor: pointer;
+  color: #1a7ac4;
+  display: flex;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .price
+  .dropbox
+  #dropbox-select {
+  font-size: 16px;
+  width: 50px;
+  border: none;
+  z-index: 5;
+  background: #fff;
+  color: #1a7ac4;
+  padding-left: 5px;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .info
+  .info-background
+  .price
+  .qty
+  ion-icon {
+  position: relative;
+  top: 2px;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .total {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .total.close {
+  visibility: hidden;
+  opacity: 0;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .total
+  .total-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .store
+  .total
+  .total-price-title
+  span
+  a {
+  text-decoration: none;
+  color: #1a7ac4;
+}
+.app .page .shopingcart .cart-background .detail-cart .store .info img {
+  width: 56px;
+  height: 56px;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  padding-left: 40px;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout.close {
+  opacity: 0;
+  visibility: hidden;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout span {
+  font-family: "Open Sans", sans-serif;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .email {
+  padding: 5px 10px;
+  height: 50px;
+  border: 1px solid #a8bac7;
+  border-radius: 3px;
+  line-height: 1.4;
+  font-size: 16px;
+  box-shadow: 0 0 0 rgb(0 0 0 / 0%) inset;
+  margin-top: 20px;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .email:focus {
+  outline: none !important;
+  border: 1px solid #1a7ac4;
+  box-shadow: 0 0 0 1px #1a7ac4 inset;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .btncheckbox {
+  position: relative;
+  top: 2px;
+  width: 24px;
+  height: 16px;
+  margin-top: 20px;
+  padding-right: 2px;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .btncheckbox {
+  position: relative;
+  top: 2px;
+  width: 24px;
+  height: 16px;
+  margin-top: 20px;
+  padding-right: 5px;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .btncheckout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .checkout
+  .btncheckout
+  span {
+  color: #757575;
+  font-family: "Open Sans", sans-serif;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .checkout
+  .btncheckout
+  button {
+  background: #232323;
+  color: #fff;
+  font-size: 1.5em;
+  height: 48px;
+  border: transparent;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.app .page .shopingcart .cart-background .detail-cart .checkout .next-title {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.app .page .shopingcart .cart-background .detail-cart .checkout .next-title h4 {
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+}
+.app
+  .page
+  .shopingcart
+  .cart-background
+  .detail-cart
+  .checkout
+  .next-title
+  span {
+  margin-top: 15px;
+}
+.footer {
+  background: rgba(196, 164, 132, 20%);
+  padding: 50px 15px 70px 15px;
+  text-align: center;
+}
+.footer h4 {
+  margin-bottom: 40px;
+}
+.footer label {
+  display: block;
+  text-align: left;
+}
+.footer input {
+  width: 476px;
+  padding: 15px 15px;
+  margin-bottom: 20px;
+}
+.footer button {
+  background: rgb(24, 24, 24);
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.footer .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.footer .social-media i {
+  color: var(--darkgrey);
+}
+.empty {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.empty.close {
+  visibility: hidden;
+  opacity: 0;
+}
+.empty span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.empty button {
+  width: 120px;
+  height: 32px;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.empty button:hover {
+  background: #eeeeee;
+}
+@media only screen and (min-width: 500px) {
+  .footer form {
+    width: 476px;
+    margin: 0 auto;
+  }
+}
+.footer button:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+.footer .social-media i:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+/* Part 4: Footer */
+@media (max-width: 921px) {
+  .app .page .block-header {
+    height: 82px;
+    padding: 28px 16px;
+  }
+  .app .page .block-header .list {
+    display: none;
+  }
+  .app .page .block-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .app .page .block-header .logo {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .app .page .block-header .cart .icon-cart {
+    font-size: 20px;
+  }
+  .app .page .block-header .cart a {
+    position: relative;
+    top: -5px;
+    font-weight: 500;
+  }
+  .app .page .block-header .logo img {
+    width: 50px;
+  }
+  .app .page .block-header .toggleMenu {
+    display: block;
+    font-size: 30px;
+  }
+  .app .page .block-header .toggleMenu.active {
+    display: none;
+  }
+  .app .page .block-header .closeBtn.active {
+    display: block;
+    font-size: 30px;
+  }
+  .app .page .block-header .list.active {
+    position: absolute;
+    top: 82px;
+    width: 100%;
+    background: #fff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 28px 0;
+    z-index: 10;
+  }
+}
+@media (max-width: 800px) and (min-width: 528px) {
+  .app .page .shopingcart {
+    font-size: 14px;
+  }
+
+  .app .page .shopingcart .cart-background .detail-cart {
+    grid-template-columns: 45% 55%;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .store .info {
+    grid-template-columns: 100%;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .info img {
+    display: none;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .checkout .btncheckout {
+    grid-template-columns: 100%;
+  }
+  .app
+    .page
+    .shopingcart
+    .cart-background
+    .detail-cart
+    .checkout
+    .btncheckout
+    .data {
+    display: none;
+  }
+}
+@media (max-width: 528px) {
+  .app .page .shopingcart {
+    font-size: 16px;
+  }
+  .app .page .shopingcart .cart-background .detail-cart {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 0;
+    flex-direction: column;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .checkout {
+    padding: 10px 0;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .checkout h1 {
+    display: none;
+  }
+  .app
+    .page
+    .shopingcart
+    .cart-background
+    .detail-cart
+    .checkout
+    .btncheckout
+    .data {
+    display: none;
+  }
+  .app .page .shopingcart .cart-background .detail-cart .checkout .btncheckout {
+    grid-template-columns: 100%;
+  }
+  .app
+    .page
+    .shopingcart
+    .cart-background
+    .detail-cart
+    .store
+    .total
+    .total-price-title {
+    display: none;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./header_footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- onscroll="headerBoxShadow()" -->
+    <div class="header" id="header-part">
+      <div class="left" id="left-part">
+        <ion-icon
+          name="menu-outline"
+          class="toggleMenu span1"
+          onclick="toggleMenu()"
+          id="menu-icon"
+        ></ion-icon>
+        <span
+          class="material-icons-outlined span2"
+          onclick="closeToggleMenu()"
+          id="close-icon"
+        >
+          close
+        </span>
+        <b class="title-font">Thos</b>
+      </div>
+      <div class="right" id="right-part">
+        <div class="toggle-menu">
+          <a href="../blog/blog.html">Blog</a>
+          <a href="../shop/shop.html">Shop</a>
+          <a href="../signinup/signup.html" class="active">Sign up</a>
+          <a href="../signinup/signin.html">Log in</a>
+        </div>
+        <div class="shopping-bag">
+          <ion-icon class="icon-cart" name="bag-outline"></ion-icon>
+          <a href="../shopingbag/shopingbag.html"
+            >Shopping bag (<span class="item-number">0</span>)</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form">
+          <input type="text" placeholder="Name" />
+          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Email address" />
+          <button>create</button>
+          <p class="message">
+            Already registered? <a href="./signin.html">Sign In</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <h4>Subscribe to our newsletter</h4>
+      <form id="form-tag">
+        <label id="email-label">Email address*</label>
+        <input type="email" placeholder="Your email address" id="email-input" />
+      </form>
+      <button id="subscribe-btn" onclick="checkEmail()">Subscribe</button>
+      <div class="social-media">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/home" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://www.pinterest.com/" target="_blank"
+          ><i class="fa-brands fa-pinterest-p"></i
+        ></a>
+      </div>
+    </div>
+    <!-- <script src="app.js"></script>  -->
+  </body>
+</html>
