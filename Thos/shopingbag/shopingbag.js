@@ -12,7 +12,7 @@ let info = document.querySelector(".info");
 let total = document.querySelector(".total");
 let checkout = document.querySelector(".checkout");
 let empty = document.querySelector(".empty");
-
+let item = window.localStorage.getItem("item");
 toggleMenu.onclick = function () {
   toggleMenu.classList.add("active");
   list.classList.add("active");
@@ -43,6 +43,20 @@ closeitem.onclick = function () {
   total.classList.add("close");
   checkout.classList.add("close");
   empty.classList.remove("close");
+  window.localStorage.setItem("item", 0);
   bag1.innerHTML = "Shopping bag (0)";
   bag2.innerHTML = "Shopping bag (0)";
 };
+if (Number(item) == 0) {
+  info.classList.add("close");
+  total.classList.add("close");
+  checkout.classList.add("close");
+  empty.classList.remove("close");
+  bag1.innerHTML = "Shopping bag (0)";
+  bag2.innerHTML = "Shopping bag (0)";
+} else {
+  bag1.innerHTML = "Shopping bag (" + item + ")";
+  bag2.innerHTML = "Shopping bag (" + item + ")";
+  dropbox.value = Number(item);
+  console.log(dropbox);
+}
