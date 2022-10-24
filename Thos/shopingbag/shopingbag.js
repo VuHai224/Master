@@ -13,6 +13,23 @@ let total = document.querySelector(".total");
 let checkout = document.querySelector(".checkout");
 let empty = document.querySelector(".empty");
 let item = window.localStorage.getItem("item");
+let login = window.localStorage.getItem("login");
+let signup = document.querySelector(".signup");
+let signin = document.querySelector(".signin");
+let userName = document.querySelector(".userName");
+
+if (login != null) {
+  signup.classList.add("disable");
+  signin.classList.add("disable");
+  list.classList.add("disable");
+  userName.classList.remove("disable");
+  userName.innerHTML = "Xin Chào: " + login;
+} else {
+  list.classList.remove("disable");
+  signup.classList.remove("disable");
+  signin.classList.remove("disable");
+  userName.classList.add("disable");
+}
 toggleMenu.onclick = function () {
   toggleMenu.classList.add("active");
   list.classList.add("active");

@@ -53,4 +53,8 @@ function headerBoxShadow(event) {
 
 let item = window.localStorage.getItem("item");
 let bag = document.querySelector(".bag");
+if (item === null) {
+  window.localStorage.setItem("item", "0");
+  item = 0;
+}
 bag.innerHTML = "Shopping Bag (" + item + ")";

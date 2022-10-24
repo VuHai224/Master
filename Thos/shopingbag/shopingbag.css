@@ -67,13 +67,29 @@
   align-items: center;
 }
 .app .page .block-header .list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto 0 auto auto;
 }
-.app .page .block-header ul li {
+.app .page .block-header .list.disable {
+  grid-template-columns: auto auto auto 0 0;
+}
+.app .page .block-header .list li {
   margin-right: 36px;
   list-style: none;
+}
+.app .page .block-header .list .signup.disable {
+  display: none;
+  visibility: hidden;
+}
+.app .page .block-header .list .signin.disable {
+  display: none;
+  visibility: hidden;
+}
+.app .page .block-header .list li .userName.disable {
+  display: none;
+}
+.app .page .block-header .list .userName {
+  display: block;
 }
 .app .page .block-header .cart a {
   position: relative;

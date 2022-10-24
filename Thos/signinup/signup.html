@@ -43,7 +43,7 @@
         >
           close
         </span>
-        <b class="title-font">Thos</b>
+        <a href="../home/Thos_home.html"><b class="title-font">Thos</b></a>
       </div>
       <div class="right" id="right-part">
         <div class="toggle-menu">
@@ -63,15 +63,16 @@
 
     <div class="login-page">
       <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="Name" />
-          <input type="password" placeholder="Password" />
-          <input type="text" placeholder="Email address" />
-          <button>create</button>
+        <div class="register-form">
+          <input class="username" type="text" placeholder="Name" />
+          <input class="password" type="password" placeholder="Password" />
+          <input class="email" type="text" placeholder="Email address" />
+          <button class="create">create</button>
           <p class="message">
             Already registered? <a href="./signin.html">Sign In</a>
           </p>
-        </form>
+          <span class="error"></span>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -96,6 +97,6 @@
         ></a>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="signup.js"></script>
   </body>
 </html>

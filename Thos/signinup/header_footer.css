@@ -32,6 +32,9 @@
 .shopbag {
   margin-bottom: 60px;
 }
+.header a {
+  text-decoration: none;
+}
 .title-font {
   font-family: Libre Baskerville;
 }
